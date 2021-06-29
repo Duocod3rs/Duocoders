@@ -1,0 +1,14 @@
+.category {
+    margin-top: 100px;
+    color: #ffff;
+    .cartoonCard {
+        background: transparent;
+        box-shadow: 4px 8px #FA7300;
+        border: 2px solid #FA7300;
+        border-radius: 20px;
+        margin-bottom: 50px;
+        .actions {
+            margin-right: 10px;
+        }
+    }
+}
