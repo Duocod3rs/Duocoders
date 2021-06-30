@@ -1,5 +1,6 @@
 import React from 'react';
-import { Navbar, Col, Nav, Button, Container, Carousel } from 'react-bootstrap'
+import { Navbar, Col, Nav, Button, Container, Carousel, Form } from 'react-bootstrap'
+import { AiOutlineSearch } from 'react-icons/ai'
 import './Home.scss'
 import 'bootstrap/dist/css/bootstrap.css'
 import Cartoons from './Cartoons';
@@ -16,8 +17,7 @@ const Home = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Col xl={{ span: '2', offset: '10' }} lg={{ span: '2', offset: '10' }}>
                         <Nav className="me-auto">
-                            <Button style={{ background: '#1F88CE', color: '#fff', borderRadius: '25px' }}>SIGN&nbsp;IN / REGISTER</Button>
-                            {/* <Nav.Link style={{ color: '#fff' }}>SIGNIN</Nav.Link> */}
+                            <Button style={{ background: '#1F88CE', color: '#fff', borderRadius: '25px', fontWeight: 'bold' }}>SIGN&nbsp;IN / REGISTER</Button>
                         </Nav>
                     </Col>
                 </Navbar.Collapse>
@@ -50,9 +50,11 @@ const Home = () => {
                     </Carousel.Item>
                 </Carousel>
             </Container>
-            {/* Content */}
-            <Container>
-                <Cartoons/>
+            {/* End of header section */}
+            <Container className="content">
+                <div className="row" style={{ justifyContent: 'center', color: '#fff' }}></div>
+                <h2>Latest Releases</h2>
+                <Cartoons />
             </Container>
         </div>
     );

@@ -1,14 +1,25 @@
-.category {
-    margin-top: 100px;
+// media screens
+$mobile: "(max-width:576px)";
+$tablet: "(max-width:992px)";
+$notebook: "(max-width:1200px)";
+$desktop: "(min-width:1200px)";
+
+
+.cartoons {
     color: #ffff;
-    .cartoonCard {
+    .CartoonCard {
         background: transparent;
-        box-shadow: 4px 8px #FA7300;
-        border: 2px solid #FA7300;
+        cursor: pointer;
         border-radius: 20px;
         margin-bottom: 50px;
         .actions {
-            margin-right: 10px;
+            margin-top: 10px;
+            display: flex;
+            float: right;
+            button {
+                font-size: small;
+                margin-right: 15px;
+            }
         }
     }
 }
