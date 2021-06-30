@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar, Col, Nav, Button, Container, Carousel } from 'react-bootstrap'
 import './Home.scss'
 import 'bootstrap/dist/css/bootstrap.css'
-import Category from './category';
+import Cartoons from './Cartoons';
 
 const Home = () => {
     const nextIcon = <span aria-hidden="true" className="carousel-control-next-icon" />
@@ -52,7 +52,7 @@ const Home = () => {
             </Container>
             {/* Content */}
             <Container>
-                <Category/>
+                <Cartoons/>
             </Container>
         </div>
     );

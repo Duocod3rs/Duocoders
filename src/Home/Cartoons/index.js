@@ -3,9 +3,9 @@ import { Card, Col, Button } from 'react-bootstrap'
 import { IoAddOutline } from 'react-icons/io5'
 import cover from '../../assets/cover.jpg'
 import view from '../../assets/view.svg'
-import './category.scss'
+import './cartoons.scss'
 
-const Category = () => {
+const Cartoons = () => {
     return (
         <div className="category">
             <h2>Latest releases</h2>
@@ -26,4 +26,4 @@ const Category = () => {
     );
 };
 
-export default Category;
+export default Cartoons;
