@@ -6,11 +6,10 @@ import 'bootstrap/dist/css/bootstrap.css'
 import Cartoons from './Cartoons';
 
 const Home = () => {
-    const nextIcon = <span aria-hidden="true" className="carousel-control-next-icon" />
     return (
         <div className="Home">
             <Navbar collapseOnSelect className="navbar" expand="lg">
-                <Navbar.Brand href="#home" className="brand">
+                <Navbar.Brand className="brand">
                     <span className="title">DUOCODERS</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{ background: '#fff' }} />
@@ -23,7 +22,7 @@ const Home = () => {
                 </Navbar.Collapse>
             </Navbar>
             <Container>
-                <Carousel nextIcon={nextIcon}>
+                <Carousel>
                     <Carousel.Item>
                         <img
                             height="360"

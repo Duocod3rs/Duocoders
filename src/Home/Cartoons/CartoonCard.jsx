@@ -9,7 +9,7 @@ const CartoonCard = (props) => {
     // eslint-disable-next-line
     const {data, loading, error} = usePalette(props.image)
     return (
-        <Col style={{ marginTop: '30px' }} xs={12} sm={12} md={6} lg={6} xl={6}>
+        <Col style={{ marginTop: '10px' }} xs={12} sm={12} md={6} lg={6} xl={6}>
             <Card className="CartoonCard" style={{boxShadow:`4px 8px ${data.vibrant}`, border:`2px solid ${data.vibrant}`}}>
                 <Card.Img alt="cover" variant="Top" style={{ borderTopLeftRadius: '20px', borderTopRightRadius: '20px', width: '100%', height: '250px' }} src={props.image} />
                 <Card.Body>
