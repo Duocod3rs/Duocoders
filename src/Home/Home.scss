@@ -5,6 +5,12 @@ body {
     overflow-x: hidden;
 }
 
+// media screens
+$mobile: "(max-width:576px)";
+$tablet: "(max-width:992px)";
+$notebook: "(max-width:1200px)";
+$desktop: "(min-width:1200px)";
+
 .Home {
     .navbar {
         background: #000;
@@ -12,18 +18,79 @@ body {
         .brand {
             color: #fff;
             .title {
-                color:'#fff';
+                color: "#fff";
                 font-size: 40px;
                 font-weight: bold;
                 font-family: "Rajdhani", sans-serif;
             }
+            :hover {
+                color: #fff;
+            }
+        }
+    }
+    .slider {
+        .slideImage {
+            height: 360px;
+            @media #{$mobile} {
+                height: 250px;
+            }
+        }
+    }
+    .socialDiv {
+        float: right;
+        margin-right: 4px;
+        margin-top: 30px;
+        display: block;
+        .socialIcon {
+            font-size: 50px;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #fff;
+            background: #1f88ce;
+            display: block;
+            margin-bottom: 5px;
+            @media #{$mobile} {
+                font-size: 40px;
+            }
         }
     }
     .content {
-        margin-top: 80px;
+        margin-top: 70px;
+        @media #{$mobile} {
+            margin-top: 45px;
+        }
+        .search-div {
+            justify-content: center;
+            color: #fff;
+            margin-bottom: 30px;
+            .search {
+                padding: 10px;
+                background: #2f3640;
+                border-radius: 10px;
+                display: flex;
+                .searchInput {
+                    padding: 20px;
+                    border-radius: 10px;
+                    color: #fff;
+                    background: #2f3640;
+                    border: none;
+                }
+                .searchBtn {
+                    background: #fff;
+                    color: #1F88CE;
+                    border-radius: 10px;
+                    margin-left: -20px;
+                }
+            }
+        }
         h2 {
             font-family: "Montserrat", sans-serif;
             color: #fff;
+        }
+        ::placeholder {
+            color: #fff;
+            font-size: large;
         }
     }
 }

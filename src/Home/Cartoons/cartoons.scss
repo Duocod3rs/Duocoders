@@ -17,6 +17,9 @@ $desktop: "(min-width:1200px)";
             display: flex;
             float: right;
             button {
+                @media (max-width:380px) {
+                    font-size: 12px;
+                }
                 font-size: small;
                 margin-right: 15px;
             }
