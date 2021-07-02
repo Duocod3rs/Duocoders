@@ -4,6 +4,7 @@ import { Card, Col, Button } from 'react-bootstrap'
 import { IoAddOutline } from 'react-icons/io5'
 import view from '../../assets/view.svg'
 import './Cartoons.scss'
+import { withRouter } from 'react-router-dom';
 
 const CartoonCard = (props) => {
     // eslint-disable-next-line
@@ -17,7 +18,7 @@ const CartoonCard = (props) => {
                     <p style={{ fontSize: '14px' }}>{props.description}</p>
                     <div className="actions">
                         <Button variant="outline-light"><IoAddOutline style={{ fontSize: "25px" }} />&nbsp;WATCHLIST</Button>
-                        <Button variant="outline-light"><img src={view} alt="view" />&nbsp;WATCH NOW</Button>
+                        <Button variant="outline-light" onClick={() => props.history.push('/'+props.title)}><img src={view} alt="view" />&nbsp;WATCH NOW</Button>
                     </div>
                 </Card.Body>
             </Card>
@@ -25,4 +26,4 @@ const CartoonCard = (props) => {
     );
 };
 
-export default CartoonCard;
+export default withRouter(CartoonCard);

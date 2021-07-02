@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 body {
     overflow-x: hidden;
@@ -11,23 +12,27 @@ $tablet: "(max-width:992px)";
 $notebook: "(max-width:1200px)";
 $desktop: "(min-width:1200px)";
 
-.Home {
-    .navbar {
-        background: #000;
-        padding: 15px;
-        .brand {
+.navbar {
+    background: #000;
+    padding: 15px;
+    .brand {
+        color: #fff;
+        .title {
+            color: "#fff";
+            font-size: 40px;
+            font-weight: bold;
+            font-family: "Rajdhani", sans-serif;
+        }
+        :hover {
             color: #fff;
-            .title {
-                color: "#fff";
-                font-size: 40px;
-                font-weight: bold;
-                font-family: "Rajdhani", sans-serif;
-            }
-            :hover {
-                color: #fff;
-            }
         }
     }
+    .navItems {
+        display: flex;
+    }
+}
+
+.Home {
     .slider {
         .slideImage {
             height: 360px;
@@ -56,14 +61,15 @@ $desktop: "(min-width:1200px)";
         }
     }
     .content {
-        margin-top: 70px;
+        margin-top: 30px;
         @media #{$mobile} {
-            margin-top: 45px;
+            margin-top: 30px;
         }
         .search-div {
             justify-content: center;
             color: #fff;
             margin-bottom: 30px;
+            margin-top: 36px;
             .search {
                 padding: 10px;
                 background: #2f3640;
@@ -78,7 +84,7 @@ $desktop: "(min-width:1200px)";
                 }
                 .searchBtn {
                     background: #fff;
-                    color: #1F88CE;
+                    color: #1f88ce;
                     border-radius: 10px;
                     margin-left: -20px;
                 }
@@ -87,10 +93,26 @@ $desktop: "(min-width:1200px)";
         h2 {
             font-family: "Montserrat", sans-serif;
             color: #fff;
+            margin-top: 30px;
         }
         ::placeholder {
             color: #fff;
             font-size: large;
         }
+    }
+}
+
+#blink {
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    animation: blinker 0.6s linear infinite;
+    color: lightgreen;
+    font-weight: bold;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0.5;
     }
 }

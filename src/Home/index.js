@@ -8,19 +8,22 @@ import Navbar from './Navbar';
 import './Home.scss'
 import 'bootstrap/dist/css/bootstrap.css'
 
-const Home = () => {
+const Home = (props) => {
     return (
         <div className="Home">
-            <Navbar />
+            <Navbar user={props.user} />
             <ImageSlider />
             <div className="socialDiv">
                 <FaInstagram className="socialIcon" />
                 <AiOutlineMail className="socialIcon" />
             </div>
             <Container className="content">
+                <center><span id="blink">
+                   <br/> No ads <br/>enjoy free streaming.
+                </span></center>
                 <div className="row search-div">
                     <Form.Group as={Col} xs={10} lg={6} className="search">
-                        <Form.Control type="text" className="searchInput" placeholder="Search Cartoons"/>
+                        <Form.Control type="text" className="searchInput" placeholder="Search Cartoons" />
                         <Button className="searchBtn"><AiOutlineSearch style={{ fontSize: '20px', fontWeight: 'bold' }} /></Button>
                     </Form.Group>
                 </div>
